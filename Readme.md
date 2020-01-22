@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Людмила Авдеева](https://up.htmlacademy.ru/htmlcss/27/user/1283949).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Пермяков](https://htmlacademy.ru/profile/webben).
 
 ---
 
