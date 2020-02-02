@@ -7,7 +7,7 @@
   <body>
     <header>
       <a href="index.html">
-        <img src="img/logo.png" alt="Логотип города Седона" width="140" height="71">
+        <img src="img/logo.png" alt="Логотип в виде треугольника синего цвета. Надпись на логотипе: City of Sedona" width="140" height="71">
       </a>
       <nav>
         <ul>
@@ -19,28 +19,34 @@
       </nav>
     </header>
     <main>
-      <h1>Город Седона</h1>
+      <h1 class="visually-hidden">Город Седона</h1>
       <section class="hero">
-        <h2>Добро пожаловать в Седону</h2>
+        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <img src="img/intro-welcome.svg" alt="Надпись: Добро пожаловать в великолепную Седону. Потому что Гранд Каньон плох">
       </section>
       <section class="features">
         <h2>Седона — небольшой городок в Аризоне,<br>
         заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <!--дальше будет список? из 5 причин-->
       </section>
       <section class="search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>
-          и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <p>Поиск гостиницы в Седоне</p>
         <ul>
           <li>
-            <button type="button">Дата заезда: 24 04 2017</button>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <label for="date-of-arrival">Дата заезда:</label>
+              <input type="date" id="date-of-arrival" name="date" value="2017-04-24">
+            </form>  
           </li>
           <li>
-            <button type="button">Дата выезда: 04 07 2017</button>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <label for="date-of-departure">Дата выезда:</label>
+              <input type="date" id="date-of-departure" name="date" value="2017-07-04">
+            </form>  
           </li>
           <li>
             <p>Взрослые:</p>
@@ -65,9 +71,9 @@
         <a href="tel:+74956660266">+7(495) 666-02-66</a>
       </p>
       <ul>
-        <li><a href="#">Твиттер</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">YouTube</a></li>
+        <li><a href="#" aria-label="Твиттер"></a></li>
+        <li><a href="#" aria-label="Фейсбук"></a></li>
+        <li><a href="#" aria-label="YouTube"></a></li>
       </ul>
       <p>Website by
         <a href="https://htmlacademy.ru/intensive/htmlcss">
