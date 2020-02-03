@@ -34,34 +34,37 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <p>Поиск гостиницы в Седоне</p>
+        <p> <button type="button">Поиск гостиницы в Седоне</button></p>
+        <form action="https://echo.htmlacademy.ru" method="post">
         <ul>
           <li>
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <label for="date-of-arrival">Дата заезда:</label>
-              <input type="date" id="date-of-arrival" name="date" value="2017-04-24">
-            </form>  
+            <label for="date-of-arrival">Дата заезда:</label>
+            <input type="date" id="date-of-arrival" name="date" value="2017-04-24">
+           </li>
+          <li>
+            <label for="date-of-departure">Дата выезда:</label>
+            <input type="date" id="date-of-departure" name="date" value="2017-07-04">
           </li>
           <li>
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <label for="date-of-departure">Дата выезда:</label>
-              <input type="date" id="date-of-departure" name="date" value="2017-07-04">
-            </form>  
+            <p>Взрослые:
+              <button type="button">-</button>
+              <label class="visually-hidden">Укажите количество взрослых
+              <input type="number" name="adults" value="2">
+              </label>
+              <button type="button">+</button>
+            </p>
           </li>
           <li>
-            <p>Взрослые:</p>
-            <button type="button">-</button>
-            <button type="button">2</button>
-            <button type="button">+</button>
-          </li>
-          <li>
-            <p>Дети:</p>
-            <button type="button">-</button>
-            <button type="button">0</button>
-            <button type="button">+</button>
+            <p>Дети:
+              <button type="button">-</button>
+              <label class="visually-hidden">Укажите количество детей</label>
+              <input type="number" name="children" value="0">
+              <button type="button">+</button>
+            </p>
           </li>
         </ul>
         <button type="submit">Найти</button>
+      </form>
       </section>
       <!--здесь будет карта Седоны-->
     </main>
