@@ -8,75 +8,116 @@
     font-style: normal;
 }
 
-.main-page {
-    margin: 0;
-    padding: 0;
-  
+html {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
     color: #000000;
-    text-transform: uppercase;
-    
-    background-color: #f2f2f2;
-   
-    
+    text-transform: uppercase;  
 }
 
-.inner-page {
-    font-family: "PT Sans", Arial, sans-serif;
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 400;
-    color: #000000;
-    text-transform: uppercase;
+*, *::before, *::after {
+   box-sizing: border-box; 
+} 
 
-    background-color: #f2f2f2;
-}
-
-.main-header,
-.container,
-.main-footer {
-    margin: 0 40px;
-    
-    background-color: #ffffff;
-    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
-}
-
-.index-container {
-    background-image: 
-    url("../img/polygon.jpg"),
-    url("../img/background-photo.jpg");
-
-    background-position: 
-    top 507px left 0, 
-    0 0;
-            
-    background-repeat: no-repeat; 
-}
-
-.hero {
-    text-align: center;
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
 }
 
 a {
     text-decoration: none;
 }
 
-.site-navigation {
+
+body {  
+    margin: 0;
+    padding: 0;       
+    background-color: #f2f2f2; 
+    width: 1280px;    
+}
+
+.body-container {
+    margin: 0;
+    margin-left: 40px; 
+    margin-right: 40px;
+    width: 1200px;
+    
+    background-color: #ffffff;
+    box-shadow: 
+    -5px 0 5px -5px rgba(0, 1, 1, 0.2),
+    5px 0 5px -5px rgba(0, 1, 1, 0.2);
+
+    background-image: 
+    url("../img/polygon.jpg"),
+    url("../img/background-photo.jpg");
+    background-position: 
+    top 507px left 0, 
+    0 0;
+    background-size:
+    1200px 59px, /* или auto*/
+    1200px 773px; /*или auto*/
+    background-repeat: no-repeat;   
+}
+
+.main-header {  
+    background-color: #ffffff;  
+    height: 56px; 
+    margin-bottom: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: space-around;
+}
+
+.main-header .wrapper {
+    width: 140px;  
+}
+
+.main-header-logo {
+    width: 140px;
+    height: 71px;
+    position: absolute;   
+} 
+
+.main-navigation {
+min-height: 56px; 
+}
+
+.main-header .site-navigation {
+    width: 1200px;
+    margin: 0;
+    padding: 0;
     font: inherit;
-    font-size: 14px;
-    line-height: 26px;
     font-weight: 700;
     list-style: none;
-    color: #000000;
-  
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    align-items: center; 
+    height: 56px;      
 }
-    
+
+/*
+.site-navigation > li {
+    width: 239px;   
+}
+
+
+.site-navigation ul:nth-child(2) {
+  margin-right: auto;
+   width: 239px;
+}*/
+
 .site-navigation a {
-    color: #000000;
+        color: #000000;       
 }
   
 .site-navigation a:hover {
@@ -94,6 +135,12 @@ a {
     background-color: #ffffff;
 }
 
+.hero {    
+    text-align: center;
+    margin-bottom: 140px;       
+}
+
+
 .button {
     font: inherit;
     font-weight: 700;
@@ -101,41 +148,46 @@ a {
     color: #ffffff;
     vertical-align: middle;
     text-transform: uppercase;
-  
-     border: none;
+    border: none;
 }
 
-.button-find,
-.button-detailed {
+.button-light {
      background-color: #81b3d2; 
 } 
 
-.button-find:hover,
-.button-detailed:hover {
+.button-light:hover {
      background-color: #669ec0; 
 } 
 
-.button-find:focus,
-.button-detailed:focus {
+.button-light:focus {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd; 
 } 
 
-.button-search,
-.button-booking {
+.button-dark {
      background-color: #766357; 
 } 
 
-.button-search:hover,
-.button-booking:hover {
+.button-dark:hover {
      background-color: #604e43; 
 } 
 
-.button-search:focus,
-.button-booking:focus {
+.button-dark:focus {
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33; 
 } 
+
+.features-reasons {
+list-style: none;
+}
+
+.features h2 {
+    display: block;
+    margin-top: 100px;
+    padding-top: 61px;
+    height: 216px;
+    background-color: #ffffff;
+}
 
 .features-title {
     font-weight: 700;
@@ -144,13 +196,34 @@ a {
     text-align: center;
 }
 
-.features-reasons {
-    color: #333333;
+.features-items-accent {
+    color: #ffffff;
+    background-color: #81b3d2;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.features-number,
+.features-text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 26px;
-    text-align: center;
+    line-height: 21px;
 }
+
+.features-items-dim {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+.features-items {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;    
+} /* с <p> не работает, с h3- работает */
 
 .type-face1 {
     font-weight: 700;

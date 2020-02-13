@@ -7,21 +7,26 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="main-page">
+    <div class="body-container">
     <header class="main-header">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo.png" alt="Логотип в виде треугольника синего цвета. Надпись на логотипе: City of Sedona" width="140" height="71">
-      </a>
+      <div class="wrapper">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo.png" alt="Логотип в виде треугольника голубого цвета. Надпись на логотипе: City of Sedona" width="140" height="71">
+        </a>
+      </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="media.html">Фото и видео</a></li>
+          
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
-    <main class=" container index-container">
+    <main class="container index-container">
       <h1 class="visually-hidden">Город Седона</h1>
+
       <section class="hero">
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <img src="img/intro-welcome.svg" alt="Надпись: Добро пожаловать в великолепную Седону. Потому что Гранд Каньон плох" width="459" height="353">
@@ -29,14 +34,89 @@
       <section class="features">
         <h2 class="features-title">Седона — небольшой городок в Аризоне,<br>
         заслуживающий большего!</h2>
-        <p class="features-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        <!--дальше будет список? из 5 причин-->
+        <p class="features-tense">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <ul class="features-reasons">
+          <li>
+            <p class="features-items-accent">Настоящий<br>
+              городок<br>
+              <span class="features-number">— №1 —</span><br>
+              <span class="features-text">Седона — не аттракцион для туристов,<br>
+                 там течёт своя жизнь</span>
+              </p>
+              <p class="features-view">
+                <img src="img/feature-picture.jpg" alt="Изображение дома с открытой верандой" width="800" height="256">
+              </p>
+          </li>
+          <li>
+            <p class="feature-icons">
+              <img src="img/icon-1.svg" alt="Иконка домик" width="75" height="72">
+            </p>
+            <p сlass="features-items">Жильё</p>
+            <p class="features-text">Рекомендуем пожить в настоящем<br>
+              мотеле, всё как в кино!
+            </p> 
+          </li>
+          <li>
+            <p class="feature-icons">
+              <img src="img/icon-3.svg" alt="Иконка бургер" width="74" height="70">
+            </p>
+            <p сlass="features-items-run">Еда</p>
+            <p class="features-text">Всегда заказывайте фирменный бургер,<br>
+              вы не разочаруетесь!
+            </p>
+          </li>
+          <li>
+            <p class="feature-icons">
+              <img src="img/icon-2.svg" alt="Иконка подарочная коробка с бантом" width="64" height="76">
+            </p>
+            <p сlass="features-items">Сувениры<br>
+            <p class="features-text">Не только китайского, но и местного<br>
+              производства!
+            </p>
+          </li>
+          <li>
+            <p class="features-view">
+              <img src="img/feature-picture2.jpg" alt="Изображение скалистой местности" width="800" height="256">
+            </p>
+            <p class="features-items-accent">Там есть<br>
+              Мост дьявола<br>
+              <span class="features-number">— №2 —</span><br>
+              <span class="features-text">Да, по нему можно пройти! Если конечно <br>
+              вы осмелитесь</span>
+            </p>
+          </li>
+          <li>
+            <p class="features-items-dim">Небольшая<br>
+              площадь<br> 
+              <span class="features-number">— №3 —</span><br> 
+              <span class="features-text">Все достопримечательности находятся <br> 
+              очень близко</span>
+            </p>
+          </li>
+          <li>
+            <p class="features-items-dim">Красивая<br>
+              дорога<br> 
+              <span class="features-number">— №4 —</span><br> 
+              <span class="features-text">Ехать в Седону из Лас-Вегаса совсем<br> 
+              не скучно!</span>
+            </p>
+          </li>
+          <li>
+            <p class="features-items-dim">Мало<br>
+              туристов<br>
+              <span class="features-number"> — №5 —</span><br> 
+              <span class="features-text">Большинство едет в гранд каньон<br> 
+                и толпится там</span>
+            </p>
+          </li>
+        </ul>
       </section>
+
       <section class="search">
         <h2 class="search-title type-face1">Заинтересовались?</h2>
         <p class="search-info type-face2">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <p> <button class="button button-search" type="button">Поиск гостиницы в Седоне</button></p>
+        <p> <button class="button button-dark" type="button">Поиск гостиницы в Седоне</button></p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <p class="input-info">
             <label for="date-of-arrival">Дата заезда:</label>
@@ -59,10 +139,12 @@
             <input type="number" name="children" value="0">
             <button type="button">+</button>
           </p>
-        <button class="button button-find" type="submit">Найти</button>
+        <button class="button button-light" type="submit">Найти</button>
       </form>
       </section>
-      <!--здесь будет карта Седоны-->
+      <section class="map">
+      <img src="img/map.jpg" alt="Город Седона на карте штата" width="1200" height="593">
+      </section>
     </main>
     <footer class="main-footer">
       <p class="footer-contacts"> 
@@ -92,5 +174,6 @@
         </a>
       </p>
     </footer>
+  </div>
   </body>
 </html>
