@@ -63,7 +63,7 @@ body {
     top 507px left 0, 
     0 0;
     background-size: 
-    1200px 59px, 
+    1200px 59px,
     1200px 773px;
     background-repeat: no-repeat;*/   
 }
@@ -71,7 +71,7 @@ body {
 .main-header {  
     background-color: #ffffff;  
     height: 56px; 
-    margin-bottom: 76px;
+    /*margin-bottom: 76px;*/
     display: flex;
     /*flex-direction: column;*/
     align-items: center;  
@@ -125,18 +125,27 @@ body {
 
 .hero {    
     text-align: center;
-    min-height: 508px;
+    min-height: 800px; /*было 508px;*/
+    padding-top: 76px;/* убрала margin в меню, добавила padding в hero*/
     /*margin-bottom: 140px;*/
-    background-image: 
-    url("../img/polygon.jpg"),
-    url("../img/background-photo.jpg");
-    /*background-position: 
-    top 507px left 0, 
-    0 0;*/
-    background-size: 
-    cover,
-    cover;
-     background-repeat: no-repeat;       
+    background-image: url("../img/background-photo.jpg");
+    background-size: cover;
+    background-color: #dae8f2;
+    background-repeat: no-repeat; 
+    
+    position: relative;
+}
+
+
+.hero p::after {
+content: "";
+display: block;
+margin-bottom: 22px;
+min-width: 1200px;
+min-height: 59px;
+background-image: url("../img/polygon.png");
+background-size:  1200px 59px;
+background-repeat: no-repeat;
 }
 
 
@@ -341,13 +350,6 @@ list-style: none;
    
 }
 
-/*.footer-contacts span {
-    display: block;
-    width: 136px;
-    height: 16px;
-    padding-bottom: 16px;
-    text-align: left;
-}*/
 
 .footer-contacts a {
     display: block;
