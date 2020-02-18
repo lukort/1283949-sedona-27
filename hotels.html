@@ -7,6 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
+    
     <header class="main-header">
       <a class="main-header-logo" href="index.html">
         <img src="img/logo.png" alt="Логотип в виде треугольника синего цвета. Надпись на логотипе: City of Sedona" width="140" height="71">
@@ -20,10 +21,94 @@
         </ul>
       </nav>
     </header>
+
     <main class="container hotels-container">
-    <!--здесь будет форма поиска отеля--> 
+      <h1 class="visually-hidden">Поиск отеля</h1>
+        <section class="select-form"> 
+          <!--или fieldset?-->
+        <h2 class="visually-hidden">Выбор отеля по параметрам</h2>
+        <p class="visually-hidden">Отметьте желаемый параметр</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-infrastructure">
+            <p>Инфраструктура:</p>
+            <ul class="infrastructure">
+              <li>            
+                <label>
+                  <input type="checkbox" name="pool" id="" checked>
+                  Бассейн
+                </label>
+              </li>
+              <li>            
+                <label>
+                  <input type="checkbox" name="parking" id="">
+                  Парковка
+                </label>
+              </li>
+              <li>            
+                <label>
+                  <input type="checkbox" name="WiFi" id="">
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-type-of-house">
+            <p>Тип жилья:</p>
+            <ul class="type-of-house">
+              <li>            
+                <label>
+                  <input type="checkbox" name="hotel" id="" checked>
+                  Гостиница
+                </label>
+              </li>
+              <li>            
+                <label>
+                  <input type="checkbox" name="motel" id="" checked>
+                  Мотель
+                </label>
+              </li>
+              <li>            
+                <label>
+                  <input type="checkbox" name="apartaments" id="" checked>
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-price">
+            <p>Стоимость в сутки (p):</p>
+            <p>
+              <span>От 0</span>
+              <span>До 3000</span>
+            </p>
+                <label>
+                  <input type="range" min="0" max="3000">
+                </label>
+                <p>
+                  <button class="button button-opacity" type="submit">Показать</button>
+                </p>
+          </div>
+        </form>
+      </section>
         <section class="selected"> 
-        <!--здесь будет заголовок Результат поиска отеля--> 
+          <div>
+            <h3>Найдено: 3</h3>
+            <!--output name="sum"-->
+            <p>Cортировка:</p>
+            <ul>
+              <li>По цене</li>
+              <li>По типу</li>
+              <li>По рейтингу</li>
+            </ul>
+            <p>
+              <button class="button-sort" type="button">
+                <img src="img/icon-up-dir.svg" alt="Кнопка в виде треугольника, направленного вверх, по возрастанию" width="11" height="10">
+              </button>
+              <button class="button-sort" type="button">
+                <img src="img/icon-down-dir.svg" alt="Кнопка в виде треугольника, направленного вниз, по убыванию" width="11" height="10">
+              </button>
+            </p>
+          </div> 
         <ul class="selected-hotels">
           <li>
             <article class="selected-hotel">
@@ -126,5 +211,6 @@
         </a>
       </p>
     </footer>
+
   </body>
 </html>
