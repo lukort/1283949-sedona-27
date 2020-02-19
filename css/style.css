@@ -36,21 +36,22 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 li {
  list-style: none;   
 }
+
 body {  
     margin: 0;
     padding: 0;       
     background-color: #f2f2f2; 
-    /*width: 1280px; */   
-}
+}   
 
 .main-page,
 .inner-page {
-    /*margin: 0;
-    margin-left: 40px; 
-    margin-right: 40px;*/
     margin: 0 auto;
     width: 1200px;
     
@@ -58,26 +59,13 @@ body {
     box-shadow: 
     -5px 0 5px -5px rgba(0, 1, 1, 0.2),
     5px 0 5px -5px rgba(0, 1, 1, 0.2);
-
-    /*background-image: 
-    url("../img/polygon.png"),
-    url("../img/background-photo.jpg");
-    background-position: 
-    top 507px left 0,
-    0 0;
-    background-size: 
-    1200px 59px,
-    1200px 773px;
-    background-repeat: no-repeat;*/
 }
 
 .main-header {  
     background-color: #ffffff;  
-    height: 56px; 
-    /*margin-bottom: 76px;*/
+    min-height: 56px; 
     display: flex;
-    /*flex-direction: column;*/
-    align-items: center;  
+    /*align-items: center;*/  
     justify-content: space-around;
     position: relative;
 }
@@ -87,12 +75,9 @@ body {
     margin-top: 0;
     width: 140px;
     height: 71px;
-    position: absolute;   
+    position: absolute; 
+    z-index: 1;  
 } 
-
-.main-navigation {
-    min-height: 56px; 
-}
 
 .main-header .site-navigation {
     width: 1200px;
@@ -102,13 +87,23 @@ body {
     font-weight: 700;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;  
-    align-items: center; 
+    justify-content: space-around;
+    align-items: center;
     height: 56px;      
 }
 
 
+/*.site-navigation a {
+    display: block;
+    width: 239px;
+    text-align: middle;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    }*/
+    
+    
 .site-navigation a {
         color: #000000;       
 }
@@ -130,27 +125,26 @@ body {
 
 .hero {    
     text-align: center;
-    min-height: 800px; /*было 508px;*/
-    padding-top: 76px;/* убрала margin в меню, добавила padding в hero*/
-    /*margin-bottom: 140px;*/
+    min-height: 800px; 
+    padding-top: 76px;
     background-image: url("../img/background-photo.jpg");
     background-size: cover;
     background-color: #dae8f2;
     background-repeat: no-repeat;
-    
     position: relative;
 }
 
-
-.hero p::after {
-content: "";
-display: block;
-margin-bottom: 22px;
-min-width: 1200px;
-min-height: 59px;
-background-image: url("../img/polygon.png");
-background-size:  1200px 59px;
-background-repeat: no-repeat;
+.hero::after {
+    content: "";
+    display: block;
+    /*margin-bottom: 22px;*/
+    min-width: 1200px;
+    min-height: 59px;
+    background-image: url("../img/polygon.png");
+    background-size:  1200px 59px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -2px;
 }
 
 
@@ -190,20 +184,11 @@ background-repeat: no-repeat;
     background-color: #503e33; 
 } 
 
-/*.features {
-    display: flex;
-    min-width: 1200;
-    min-height: 1300;
-}*/
-
 .features-reasons {
 list-style: none;
 }
 
 .features h2 {
-/*margin-top: 100px;
-    padding-top: 61px;
-    height: 216px;*/
     background-color: #ffffff;
 }
 
@@ -212,18 +197,6 @@ list-style: none;
     font-size: 21px;
     line-height: 36px;
 }
-/*.features .features-main {
-    display: flex;
-    width: 1200px;
-    height: 216px;
-   
-  
-}
-.features-items {
-    display: flex;
-    width: 1200px;
-    height: 256px;
-}*/
 
 .features-items-accent {
     color: #ffffff;
@@ -427,10 +400,7 @@ list-style: none;
     color: #ffffff;
 }
 
-/*.selected-hotels,
-.stars li {
-list-style: none;
-}  заменила на общий li вверху*/
+
 .select-form p {
     font-weight: 700;
     font-size: 16px;
@@ -471,5 +441,71 @@ list-style: none;
     line-height: 21px;
     text-align: center;
     background-color: #f2f2f2;
+}
+
+
+.selected-result p {
+    color: #000000;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.button-sort {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    background-color:#ffffff;
+    border: none;
+    border-bottom: 1px dashed #81b3d2;
+
+}
+
+.button-sort:hover {
+    color: #81b3d2;
+}
+
+.button-sort:focus {
+    color: #000000;
+    border-bottom: none; 
+}
+
+/*.button:active {
+    color: #81b3d2;
+    border-bottom: none;
+}*/
+
+.button-updown {
+width: 20px;
+height: 20px;
+background-color:#ffffff;
+background-size: 11px 10px;
+background-position: center;
+background-repeat: no-repeat;
+border: none;
+}
+
+.button-updown-up {
+    background-image: url("../img/grey-icon-up-dir.png");   
+}
+.button-updown-up:hover {
+    background-image: url("../img/black-icon-up-dir.png");   
+}
+.button-updown-up:focus,
+.button-updown-up:active {
+    background-image: url("../img/blue-icon-up-dir.png");   
+}
+
+
+.button-updown-down{
+    background-image: url("../img/grey-icon-down-dir.png");   
+}
+.button-updown-down:hover {
+    background-image: url("../img/black-icon-down-dir.png");   
+}
+.button-updown-down:focus /*,
+.button-updown-down:active*/ {
+    background-image: url("../img/blue-icon-down-dir.png");   
 }
   

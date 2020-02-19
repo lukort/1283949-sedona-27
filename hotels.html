@@ -24,12 +24,12 @@
 
     <main class="container hotels-container">
       <h1 class="visually-hidden">Поиск отеля</h1>
+
         <section class="select-form"> 
-          <!--или fieldset?-->
         <h2 class="visually-hidden">Выбор отеля по параметрам</h2>
         <p class="visually-hidden">Отметьте желаемый параметр</p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="form-infrastructure">
+          <div class="form-list">
             <p>Инфраструктура:</p>
             <ul class="infrastructure">
               <li>            
@@ -52,7 +52,7 @@
               </li>
             </ul>
           </div>
-          <div class="form-type-of-house">
+          <div class="form-list">
             <p>Тип жилья:</p>
             <ul class="type-of-house">
               <li>            
@@ -90,72 +90,80 @@
           </div>
         </form>
       </section>
-        <section class="selected"> 
-          <div>
+
+        <section class="selected">
+
+          <div class="selected-result">
             <h3>Найдено: 3</h3>
             <!--output name="sum"-->
+            <p class="visually-hidden"> Можно отсортировать найденные отели по цене, типу, рейтингу</p>
             <p>Cортировка:</p>
             <ul>
-              <li>По цене</li>
-              <li>По типу</li>
-              <li>По рейтингу</li>
+              <li>
+                <button class="button-sort button:active" type="button">По цене</button>
+              </li>
+              <li>
+                <button  class="button-sort" type="button">По типу</button>
+              </li>
+              <li>
+                <button class="button-sort" type="button">По рейтингу</button>
+              </li>
             </ul>
-            <p>
-              <button class="button-sort" type="button">
-                <img src="img/icon-up-dir.svg" alt="Кнопка в виде треугольника, направленного вверх, по возрастанию" width="11" height="10">
+            <div>
+              <button class="button-updown button-updown-up" type="button" aria-label="Kнопка в виде треугольника, направленного вверх, выбрать по возрастанию">
               </button>
-              <button class="button-sort" type="button">
-                <img src="img/icon-down-dir.svg" alt="Кнопка в виде треугольника, направленного вниз, по убыванию" width="11" height="10">
+              <button class="button-updown button-updown-down" type="button" aria-label="Kнопка в виде треугольника, направленного вниз, выбрать по убыванию">
               </button>
-            </p>
+            </div>
           </div> 
-        <ul class="selected-hotels">
-          <li>
-            <article class="selected-hotel">
-              <h3>Amara Resort & Spa</h3>  
-              <p>
-                <span>Гостиница</span>
-                <span>От 4000 Р.</span>
-              </p>
-              <img src="img/hotel-picture1.jpg" alt="Изображение здания гостиницы Amara Resort & Spa на фоне скал" width="135" height="90">
-              <p>
-                <a class="button button-light" href="">Подробнее</a>
-                <a class="button button-dark" href="">Забронировать</a>
-              </p>
-              <div class="stars-rating">
-                <p class="visually-hidden">Категория гостиницы</p>
-                <ul class="stars">
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                </ul>
-                <p class="rating">Рейтинг: 8,5</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="selected-hotel">
-              <h3>Desert Quail Inn</h3>  
-              <p>
-                <span>Мотель</span>
-                <span>От 3000 Р.</span>
-              </p>
-              <img src="img/hotel-picture2.jpg" alt="Изображеение здания Мотеля Desert Quail Inn и подъездной дороги к нему" width="135" height="90">
-              <p>
-                <a class="button button-light" href="">Подробнее</a>
-                <a class="button button-dark" href="">Забронировать</a>
-              </p>
-              <div class="stars-rating">
-                <p class="visually-hidden">Категория мотеля</p>
-                <ul class="stars">
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                  <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
-                </ul>
-                <p class="rating">Рейтинг: 8,9</p>
-              </div>
+
+          <ul class="selected-hotels">
+            <li>
+              <article class="selected-hotel">
+                <h3>Amara Resort & Spa</h3>  
+                <p>
+                  <span>Гостиница</span>
+                  <span>От 4000 Р.</span>
+                </p>
+                <img src="img/hotel-picture1.jpg" alt="Изображение здания гостиницы Amara Resort & Spa на фоне скал" width="135" height="90">
+                <p>
+                  <a class="button button-light" href="">Подробнее</a>
+                  <a class="button button-dark" href="">Забронировать</a>
+                </p>
+                <div class="stars-rating">
+                  <p class="visually-hidden">Категория гостиницы</p>
+                  <ul class="stars">
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                  </ul>
+                  <p class="rating">Рейтинг: 8,5</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="selected-hotel">
+                <h3>Desert Quail Inn</h3>  
+                <p>
+                  <span>Мотель</span>
+                  <span>От 3000 Р.</span>
+                </p>
+                <img src="img/hotel-picture2.jpg" alt="Изображение здания Мотеля Desert Quail Inn и подъездной дороги к нему" width="135" height="90">
+                <p>
+                  <a class="button button-light" href="">Подробнее</a>
+                  <a class="button button-dark" href="">Забронировать</a>
+                </p>
+                <div class="stars-rating">
+                  <p class="visually-hidden">Категория мотеля</p>
+                  <ul class="stars">
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                    <li><img src="img/star.svg" alt="звезда" width="18" height="17"></li>
+                  </ul>
+                  <p class="rating">Рейтинг: 8,9</p>
+                </div>
             </article>
           </li>
           <li>
@@ -182,7 +190,9 @@
           </li>
         </ul>
       </section>
+
     </main>
+
     <footer class="main-footer">
       <p class="footer-contacts"> 
         <span>#visitSEDONA</span>
