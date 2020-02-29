@@ -229,6 +229,7 @@ body {
     padding-top: 76px;
     background-image: url("../img/background-photo.jpg");
     background-size: cover;
+    background-position: 0px -70px;
     background-color: #dae8f2;
     background-repeat: no-repeat;
     position: relative;
@@ -600,12 +601,81 @@ body {
   
 /* для  hotels.html*/
 
-.hotels-container {  
+.select-form {
+    width: 1200px;
+    height: 200px;
     background-image: url("../img/filter-background.jpg");
-    background-size: 1200px 562px;
+    background-color: #dae8f2;
+    background-size: 1200px 562px; /*800px*/
+    background-size: cover;
     background-repeat: no-repeat;
+    margin-top: -20px;
+    background-position: 0px -310px;
+} 
+
+.selected-hotels {
+    display: flex ;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0; 
+    border: 1px solid greenyellow;
+}   
+
+.hotel-box { 
+    width: 1200px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-left: -40px;
+    border-top:1px solid rgba(0, 0, 0, 0.3); /*добавить у последней, цвет?*/
 }
 
+.selected-hotel {
+    display: flex;
+    margin: 0;
+    width: 1200px; 
+    /*min-height: 151px;*/
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dashed red;
+} 
+
+.hotel-info {
+    display: flex;
+    width: 363px;
+    min-height: 151px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;  
+    border: 1px dashed blue;
+    /*position: relative;*/
+}
+
+
+.stars-rating {
+    display: flex;
+    width: 600px;
+    min-height: 151px;
+    justify-content: flex-end;
+    align-items: center;  
+    border: 1px dashed black;   
+}
+   
+
+.selected-hotel .image-info {
+    /*width: 135px;
+    height: 90px;*/
+    margin-left: 72px;
+    margin-right: 30px;
+}
+
+/*.hotel-info h3 {
+margin-top: 30px;
+}*/
 
 
 .select-form {
