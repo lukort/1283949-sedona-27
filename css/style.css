@@ -131,7 +131,7 @@ body {
     background-color: #ffffff;
 }
 
-.button {
+.button { /*разораться с батон в прайсе*/
     display: inline-block; 
     margin-right: 6px;
     font: inherit;
@@ -543,7 +543,6 @@ body {
     margin-left: auto;
 }
 
-
 .input-info svg {
    position: absolute;
     z-index: 1;
@@ -560,6 +559,420 @@ body {
 
 .input-info  svg:focus path {
     fill: #81b3d2; /*не работает*/
+}
+
+
+/* для  hotels.html*/
+
+.filter-container {
+    display: flex;
+    width: 100%;
+    min-height: 217px; /*сделать min-height*/
+    margin: 0;
+    color: #ffffff;           
+    background-image: url("../img/filter-background.jpg");
+    background-color: #dae8f2;
+    background-size: 1200px 562px; /*800px*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -310px;
+    border: 1px solid red;
+} 
+
+.filter-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 31px 72px 31px 72px;
+   border: 1px solid greenyellow;
+}
+
+.filter-container fieldset {
+    border: none;
+}
+
+.form-list li {
+    margin-left: -40px;  
+}
+
+.form-list legend,
+.form-price p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.filter-form {
+    display: flex;
+    width: 50%;
+    height: 151px;
+    border: 1px dashed fuchsia;
+}
+
+
+.form-list {
+    margin-top: -6px; /*оставить этот вариант*/
+    /*margin-left: -10px; */
+}
+
+.form-list ul {
+    display: flex;
+    width: 139px;
+    height: 115px;  /*min*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-checkbox {
+    position: relative; 
+    padding-left: 40px;
+}
+
+.form-checkbox input[type="checkbox"] + .checkbox-indicator {
+    content: "";
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+    content: "";
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.filter-form .form-list:nth-child(1){
+ margin-left: -10px;   
+ margin-right: 95px;   /* по макету 115px*/
+}
+
+.filter-form:nth-child(2) {
+justify-content: flex-end;
+}
+
+.form-price {
+    width: 314px;
+    /*border: 1px solid white;*/
+}
+
+.form-price-title {
+    margin-top: -6px;
+    margin-bottom: 13px;
+}
+
+.price-control {
+    position: relative;
+    height: 32px;
+    margin-bottom: 22px;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+.price-control::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.price-control label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;/**/
+    cursor: pointer;
+} 
+
+.price-control .min-price,
+.price-control .max-price {
+  width: 152px; /*исправить на 157?*/
+  padding-left: 65px;
+  /*border: 1px dashed red;*/
+}
+
+.price-control input {
+    width: 50px;
+    margin: 0;
+    color: #ffffff;
+    /*font: inherit;*/
+    background: none;
+    border: none;
+   /* border: 1px dashed yellow;*/
+}
+
+.form-price label
+.form-price button { /*баттон см ниже, дважды шрифты*/
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.range-control {
+    position: relative;
+    margin-bottom: 20px; /*разобраться*/
+}
+
+.range-control .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-control .bar {
+    width: 78%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -8px;
+    width: 4px;
+    height: 4px;
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2); /*?*/
+    cursor: pointer;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+  
+.range-toggle-max {
+    left: 78%;
+}
+
+.range-toggle:hover {
+    border: 10px solid #ffffff;
+}
+  
+.button-opacity /*.form-price button*/ {
+    display: block;
+    margin: 0 auto;
+    padding: 11px 33px 11px 35px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+} /*доделать кнопку*/
+
+
+.button-opacity:hover {
+   color: #000000;
+   background-color: #ffffff;  
+}
+
+.selected-result p {
+    color: #000000;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.button-sort {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    background-color:#ffffff;
+    border: none;
+    border-bottom: 1px dashed #81b3d2;
+}
+
+.button-sort:hover {
+    color: #81b3d2;
+}
+
+.button-sort:focus {
+    color: #000000;
+    border-bottom: none; 
+}
+
+.button-sort.button\:active {
+    color: #81b3d2;
+    border-bottom: none;
+}
+
+.button-updown {
+width: 20px;
+height: 20px;
+background-color:#ffffff;
+background-size: 11px 10px;
+background-position: center;
+background-repeat: no-repeat;
+border: none;
+}
+
+.button-updown-up {
+    background-image: url("../img/grey-icon-up-dir.png");   
+}
+.button-updown-up:hover {
+    background-image: url("../img/black-icon-up-dir.png");   
+}
+.button-updown-up:focus,
+.button-updown-up:active {
+    background-image: url("../img/blue-icon-up-dir.png");   
+}
+
+
+.button-updown-down{
+    background-image: url("../img/grey-icon-down-dir.png");   
+}
+.button-updown-down:hover {
+    background-image: url("../img/black-icon-down-dir.png");   
+}
+.button-updown-down:focus /*,
+.button-updown-down:active*/ {
+    background-image: url("../img/blue-icon-down-dir.png");   
+}
+
+
+
+
+
+
+.selected-hotels {
+    display: flex ;
+    width: 100%;
+    justify-content: space-between;
+    /*align-items: center;*/
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0; 
+} 
+
+.selected-hotel .image-info {
+    width: 135px;
+    height: 90px;
+    margin-right: 30px;
+}  
+
+.hotel-box { 
+    width: 1200px; 
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    margin: 0;
+    margin-left: -40px;
+    border-top:1px solid rgba(0, 0, 0, 0.3); 
+}
+
+.hotel-box:last-child {
+    border-bottom:1px solid rgba(0, 0, 0, 0.3);  
+}
+
+.selected-hotel {
+    display: flex;
+    margin: 0;
+    width: 1200px; 
+    margin: 31px 72px 30px;
+    justify-content: space-between;
+    /*align-items: flex-start; */ 
+} 
+
+.hotel-info {
+    display: flex;
+    margin: 0;
+    width: 363px;
+    height: 90px;
+    flex-direction: column;
+    justify-content: /*flex-start*/ space-between;
+    align-items: flex-start;  
+    position: relative;
+}   
+
+.hotel-info h3,
+.hotel-info p {
+margin: 0;
+}
+
+.hotel-info h3 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px; 
+    margin-top: -5px; /*разобраться*/
+}
+
+.hotel-info h3:hover {
+   color: #81b3d2; 
+}
+
+.hotel-info h3:focus {
+    color:#000000; 
+    opacity: 0.3;
+ }
+
+.hotel-info span {
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;      
+}
+
+.hotel-info .info-price {
+position: absolute;
+bottom: 42px;
+left: 116px;
+}
+
+
+.stars-rating {
+    display: flex;
+    width: 50%;
+    height: 90px;
+    justify-content: flex-end;
+    align-items: center;  
+    border: 1px solid fuchsia;
+}
+   
+
+.rating-box {
+    display: flex;
+    min-width: 110px;
+    height: 90px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stars {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stars img {
+margin-left: 5px;
+}
+
+.rating {
+    color: #666666;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #f2f2f2;
+    padding: 5px 13px 6px 16px;
+    margin-bottom: 0;
 }
 
 
@@ -645,235 +1058,3 @@ body {
     fill: #bdbbbc; 
 }
   
-/* для  hotels.html*/
-
-.select-form {
-    width: 1200px;
-    height: 217px;
-    background-image: url("../img/filter-background.jpg");
-    background-color: #dae8f2;
-    background-size: 1200px 562px; /*800px*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: -20px;
-    background-position: 0px -310px;
-} 
-
-.selected-hotels {
-    display: flex ;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0; 
-} 
-
-.selected-hotel .image-info {
-    width: 135px;
-    height: 90px;
-    margin-right: 30px;
-}  
-
-.hotel-box { 
-    width: 1200px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    margin-left: -40px;
-    border-top:1px solid rgba(0, 0, 0, 0.3); 
-}
-
-.hotel-box:last-child {
-    border-bottom:1px solid rgba(0, 0, 0, 0.3);  
-}
-
-.selected-hotel {
-    display: flex;
-    margin: 0;
-    width: 1200px; 
-    margin: 31px 72px 30px;
-    justify-content: space-between;
-    align-items: flex-start;  
-} 
-
-.hotel-info {
-    display: flex;
-    margin: 0;
-    width: 363px;
-    height: 90px;
-    flex-direction: column;
-    justify-content: /*flex-start*/ space-between;
-    align-items: flex-start;  
-    position: relative;
-}   
-
-.hotel-info h3,
-.hotel-info p {
-margin: 0;
-}
-
-.hotel-info h3 {
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 26px; 
-    margin-top: -5px; /*разобраться*/
-}
-
-.hotel-info h3:hover {
-   color: #81b3d2; 
-}
-
-.hotel-info h3:focus {
-    color:#000000; 
-    opacity: 0.3;
- }
-
-.hotel-info span {
-    color: #333333;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;      
-}
-
-.hotel-info .info-price {
-position: absolute;
-bottom: 42px;
-left: 116px;
-}
-
-
-.stars-rating {
-    display: flex;
-    width: 600px;
-    height: 90px;
-    justify-content: flex-end;
-    align-items: center;  
-}
-   
-
-.rating-box {
-    display: flex;
-    min-width: 110px;
-    height: 90px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.stars {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.stars img {
-margin-left: 5px;
-}
-
-.rating {
-    color: #666666;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    background-color: #f2f2f2;
-    padding: 5px 13px 6px 16px;
-    margin-bottom: 0;
-}
-
-
-.select-form {
-    color: #ffffff;
-}
-
-.select-form p {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 21px;
-    text-align: left; 
-}
-
-.select-form span,
-.select-form button {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #ffffff;
-    background: transparent;
-}
-
-
-.button-opacity {
-    padding: 11px 35px /*11px 33px*/; 
-    border: 1px solid #ffffff;   
-}
-
-.button-opacity:hover {
-   color: #000000;
-   background-color: #ffffff;  
-}
-
-
-.selected-result p {
-    color: #000000;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-}
-
-.button-sort {
-    color: rgba(0, 0, 0, 0.3);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    background-color:#ffffff;
-    border: none;
-    border-bottom: 1px dashed #81b3d2;
-}
-
-.button-sort:hover {
-    color: #81b3d2;
-}
-
-.button-sort:focus {
-    color: #000000;
-    border-bottom: none; 
-}
-
-.button-sort.button\:active {
-    color: #81b3d2;
-    border-bottom: none;
-}
-
-.button-updown {
-width: 20px;
-height: 20px;
-background-color:#ffffff;
-background-size: 11px 10px;
-background-position: center;
-background-repeat: no-repeat;
-border: none;
-}
-
-.button-updown-up {
-    background-image: url("../img/grey-icon-up-dir.png");   
-}
-.button-updown-up:hover {
-    background-image: url("../img/black-icon-up-dir.png");   
-}
-.button-updown-up:focus,
-.button-updown-up:active {
-    background-image: url("../img/blue-icon-up-dir.png");   
-}
-
-
-.button-updown-down{
-    background-image: url("../img/grey-icon-down-dir.png");   
-}
-.button-updown-down:hover {
-    background-image: url("../img/black-icon-down-dir.png");   
-}
-.button-updown-down:focus /*,
-.button-updown-down:active*/ {
-    background-image: url("../img/blue-icon-down-dir.png");   
-}

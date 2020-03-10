@@ -26,69 +26,91 @@
     <main class="container hotels-container">
       <h1 class="visually-hidden">Поиск отеля</h1>
 
-        <section class="select-form"> 
+        <section class="filter-container">  
         <h2 class="visually-hidden">Выбор отеля по параметрам</h2>
         <p class="visually-hidden">Отметьте желаемый параметр</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="form-list">
-            <p>Инфраструктура:</p>
+        <form class="filter-box" action="https://echo.htmlacademy.ru" method="get">
+          <div class="filter-form">
+          <fieldset class="form-list">
+            <legend>Инфраструктура:</legend>
             <ul class="infrastructure">
               <li>            
-                <label>
-                  <input type="checkbox" name="pool" checked>
+                <label class="form-checkbox">
+                  
+                  <input type="checkbox" name="pool" class="visually-hidden" checked>
+                  <span class="checkbox-indicator"></span>
                   Бассейн
                 </label>
               </li>
               <li>            
-                <label>
-                  <input type="checkbox" name="parking">
+                <label class="form-checkbox">
+                  
+                  <input type="checkbox" name="parking" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
                   Парковка
                 </label>
               </li>
               <li>            
-                <label>
-                  <input type="checkbox" name="WiFi">
+                <label class="form-checkbox">
+                  
+                  <input type="checkbox" name="WiFi" class="visually-hidden">
+                  <span class="checkbox-indicator"></span>
                   Wi-Fi
                 </label>
               </li>
             </ul>
-          </div>
-          <div class="form-list">
-            <p>Тип жилья:</p>
+          </fieldset>
+          <fieldset class="form-list">
+            <legend>Тип жилья:</legend>
             <ul class="type-of-house">
               <li>            
-                <label>
-                  <input type="checkbox" name="hotel" checked>
+                <label class="form-checkbox">
+                  
+                  <input type="checkbox" name="hotel" class="visually-hidden" checked> 
+                  <span class="checkbox-indicator"></span>
                   Гостиница
                 </label>
               </li>
               <li>            
-                <label>
-                  <input type="checkbox" name="motel" checked>
+                <label class="form-checkbox">
+
+                  <input type="checkbox" name="motel" class="visually-hidden" checked> 
+                  <span class="checkbox-indicator"></span>
                   Мотель
                 </label>
               </li>
               <li>            
-                <label>
-                  <input type="checkbox" name="apartaments" checked>
+                <label class="form-checkbox">
+                  
+                  <input type="checkbox" name="apartaments" class="visually-hidden" checked> 
+                  <span class="checkbox-indicator"></span>
                   Апартаменты
                 </label>
               </li>
             </ul>
-          </div>
+          </fieldset>
+        </div>
+        <div class="filter-form">
           <div class="form-price">
-            <p>Стоимость в сутки (p):</p>
-            <p>
-              <span>От 0</span>
-              <span>До 3000</span>
-            </p>
-                <label>
-                  <input type="range" min="0" max="3000">
+            <p class="form-price-title">Стоимость в сутки (p):</p>
+            <div class="price-control">
+              <label class="min-price">от
+              <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">до
+                <input type="number" name="max-price" value="3000">
                 </label>
-                <p>
-                  <button class="button button-opacity" type="submit">Показать</button>
-                </p>
+            </div>
+            <div class="range-control"> 
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+                <button class="button button-opacity" type="submit">Показать</button>
           </div>
+        </div>
         </form>
       </section>
 
