@@ -37,10 +37,13 @@ li {
 }
 
 body {  
-    margin: 0;
-    padding: 0;       
+    margin: 0;    
     background-color: #000000; 
-}   
+} 
+
+.container {
+    margin: 0 auto;
+}
 
 .main-page,
 .inner-page {
@@ -177,7 +180,7 @@ body {
     font-size: 21px;
     line-height: 26px;
     padding: 35px 139px 33px 140px;
-    margin-left: 6px; /*по умолчанию?*/
+    margin-left: 6px; 
 }
 
 .selected-hotel .button-dark {
@@ -206,8 +209,9 @@ body {
 /*сетка для главной страницы*/
 
 .index-container {
-    width: 100%; /*1200px;*/
+    width: 100%;
     min-height: 2586px;
+
 }
 
 .hero {  
@@ -408,14 +412,13 @@ body {
 .features-gift .features-block-drops::before {
     background-image: url("../img/icon-2.svg");
     background-size: 64px 76px;  
-    /*text-align: ;  выровнить по низу иконок?*/
 }
 
 .features-reasons li:nth-child(1) {
     order: -2;
 }
 
-.features-reasons li:nth-child(6) {  /*получается 6й, т.к. считает dim за 3 элемента*/
+.features-reasons li:nth-child(6) {  
     order: -1;
 }
 
@@ -458,7 +461,10 @@ body {
     left: 50%;
     margin-left: -284px;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);  
-    /*display: none;*/  
+}
+
+.search-field-hide {
+    display: none; 
 }
 
 .search-form {
@@ -513,15 +519,12 @@ body {
 .quantity .input-child {
     display: flex;
     min-height: 38px;
-    position: relative; /**/
+    position: relative;
 }
 
 .quantity .input-adults {
-    display: flex;
     width: 226px;
-    min-height: 38px;
     justify-content: flex-start;
-    position: relative; /**/
 }
 
 .quantity .input-child {
@@ -530,7 +533,6 @@ body {
     min-height: 38px;
     justify-content: flex-end;
 }
-
 
 .quantity button,
 .quantity input {
@@ -542,10 +544,12 @@ body {
     border: none;   
 }
 
-.quantity input {
+.quantity input,
+.input-info input {
     font-weight: 700;
     font-size: 14px;
     line-height: 26px;
+    text-transform: uppercase;
 }
 
 .input-adults .number-minus::before {
@@ -629,6 +633,12 @@ body {
     fill: #81b3d2; /*не работает*/
 }
 
+.map {
+    display: block;
+    height: 473px; 
+    background-size: cover;
+}
+
 
 /* для  hotels.html*/
 
@@ -640,7 +650,7 @@ body {
     color: #ffffff;           
     background-image: url("../img/filter-background.jpg");
     background-color: #dae8f2;
-    background-size: 1200px 562px; /*800px*/
+    background-size: 1200px 562px; 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px -310px;
@@ -676,7 +686,7 @@ body {
 }
 
 .form-list {
-    margin-top: -6px; /*оставиь этот вариант*/
+    margin-top: -6px; 
 }
 
 .form-list ul {
@@ -719,7 +729,7 @@ body {
 
 .filter-form .form-list:nth-child(1){
  margin-left: -10px;   
- margin-right: 95px;   /* по макету 115px*/
+ margin-right: 95px;   
 }
 
 .filter-form:nth-child(2) {
@@ -737,9 +747,9 @@ justify-content: flex-end;
 
 .price-control {
     position: relative;
-    height: 36px; /*36=32+2+2*/
+    height: 36px; 
     margin-bottom: 22px;
-    font-size: 0; /*зачем*/
+    font-size: 0; 
     border: 2px solid #ffffff;
     border-radius: 2px;
 }
@@ -826,9 +836,8 @@ justify-content: flex-end;
   
 .button-opacity {
     display: block;
-    /*width: 133px;*/
     margin: 0 auto;
-    padding: /*11px 33px 11px 35px*/ 6px 36px;
+    padding: 6px 36px;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -888,7 +897,6 @@ margin: 0 auto;
     display: flex;
     width: 50%;
     padding-right: 73px;
-    /*height: 90px;*/
     justify-content: flex-end;
     align-items: center;  
 }
@@ -954,7 +962,6 @@ border: none;
     display: flex ;
     width: 100%;
     justify-content: space-between;
-    /*align-items: center;*/
     flex-wrap: wrap;
     list-style: none;
     margin: 0; 
@@ -970,7 +977,6 @@ border: none;
     width: 1200px; 
     display: flex;
     justify-content: space-between;
-    /*align-items: center;*/
     margin: 0;
     margin-left: -40px;
     border-top:1px solid rgba(0, 0, 0, 0.3); 
@@ -986,7 +992,6 @@ border: none;
     width: 1200px; 
     margin: 31px 72px 30px;
     justify-content: space-between;
-    /*align-items: flex-start; */ 
 } 
 
 .hotel-info {
@@ -1081,7 +1086,7 @@ margin-left: 5px;
     justify-content: space-around; 
     align-items: center;
     background-color: #ffffff;
-    /*margin: 36px 101px 36px 132px;*/
+    opacity: 0.9;
 }
   
 .main-footer a {
@@ -1144,10 +1149,14 @@ margin-left: 5px;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
-    width: 197px;
     margin: 0 auto;
     justify-content: space-between; 
     align-items: center;
+}
+
+.footer-copyright a {
+    display: flex;  
+    margin-left: 11px;
 }
 
 .footer-copyright a:hover path {
