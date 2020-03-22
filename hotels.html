@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="inner-page">
     
@@ -43,7 +43,7 @@
               </li>
               <li>            
                 <label class="form-checkbox">
-                  <input type="checkbox" name="parking" class="visually-hidden">
+                  <input type="checkbox" name="parking" class="visually-hidden"> 
                   <span class="checkbox-indicator"></span>
                   Парковка
                 </label>
@@ -78,23 +78,23 @@
                 <label class="form-checkbox">
                   <input type="checkbox" name="apartaments" class="visually-hidden" checked> 
                   <span class="checkbox-indicator"></span>
-                  Апартаменты
+                  Апартаменты 
                 </label>
               </li>
             </ul>
           </fieldset>
-        </div>
-        <div class="filter-form">
-          <div class="form-price">
-            <p class="form-price-title">Стоимость в сутки (p):</p>
-            <div class="price-control">
-              <label class="min-price">от
-                <input type="number" name="min-price" value="0">
-              </label>
-              <label class="max-price">до
-                <input type="number" name="max-price" value="3000">
-              </label>
-            </div>
+          </div>
+          <div class="filter-form">
+            <div class="form-price">
+              <p class="form-price-title">Стоимость в сутки (p):</p>
+              <div class="price-control">
+                <label class="min-price">от
+                  <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">до
+                  <input type="number" name="max-price" value="3000">
+                </label>
+              </div>
             <div class="range-control"> 
               <div class="scale">
                 <div class="bar"></div>
@@ -102,10 +102,10 @@
               <div class="range-toggle range-toggle-min"></div>
               <div class="range-toggle range-toggle-max"></div>
             </div>
-                <button class="button button-opacity" type="submit">Показать</button>
+              <button class="button button-opacity" type="submit">Показать</button>
           </div>
         </div>
-        </form>
+      </form>
       </section>
 
         <section class="selected">
@@ -138,7 +138,9 @@
               <article class="selected-hotel">
                 <img class="image-info" src="img/hotel-picture1.jpg" alt="Изображение здания гостиницы Amara Resort & Spa на фоне скал" width="135" height="90">
                 <div class="hotel-info info-hotel">
-                  <h3>Amara Resort & Spa</h3>  
+                  <h3>
+                    <a class="hotel-name" href="">Amara Resort & Spa</a>
+                  </h3>  
                   <p>
                     <span class="info-type">Гостиница</span>
                     <span class="info-price">От 4000 Р.</span>
@@ -167,7 +169,9 @@
               <article class="selected-hotel">
                 <img class="image-info" src="img/hotel-picture2.jpg" alt="Изображение здания Мотеля Desert Quail Inn и подъездной дороги к нему" width="135" height="90">
                 <div class="hotel-info info-motel">
-                  <h3>Desert Quail Inn</h3>  
+                  <h3>
+                    <a class="hotel-name" href="">Desert Quail Inn</a>
+                  </h3>  
                   <p>
                     <span>Мотель</span>
                     <span class="info-price">От 3000 Р.</span>
@@ -194,7 +198,9 @@
               <article class="selected-hotel">
                 <img class="image-info" src="img/hotel-picture3.jpg" alt="Изображение здания Апартаментов Villas at Poco Diablo в окружении зелёных деревьев " width="135" height="90">
                 <div class="hotel-info info-apartments">
-                  <h3>Villas at Poco Diablo</h3> 
+                  <h3>
+                    <a class="hotel-name" href="">Villas at Poco Diablo</a>
+                  </h3> 
                   <p>
                     <span>Апартаменты</span>
                     <span class="info-price">От 2000 Р.</span>
