@@ -1,4 +1,4 @@
-html {
+html {   
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 26px;
@@ -184,11 +184,12 @@ body {
     background-color: #766357; 
  } 
 
-.search .button-dark {
+/*.search .button-dark*/ .button-search {
     font-size: 21px;
     line-height: 26px;
     padding: 35px 139px 33px 140px;
     margin-left: 6px; 
+    cursor: pointer;          /***/
 }
 
 .selected-hotel .button-dark {
@@ -228,7 +229,7 @@ body {
     background-image: url("../img/background-photo.jpg");
     background-size: cover;
     background-position: 0px -70px;
-    background-color: #dae8f2;
+    background-color: #81b3d2;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -461,13 +462,39 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -284px;
-    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);  
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15); 
 }
 
-.search-field-hide {
+.search-field-show {    
+ display: block;
+ animation: bounce 2s;
+}
+
+.search-field-close {
     display: none; 
 }
 
+@keyframes bounce {
+        0% {
+          transform: translateY(-86px);
+        }
+      
+        25% {
+          transform: translateY(-75px);
+        }
+      
+        50% {
+          transform: translateY(-50px);
+        }
+
+        75% {
+            transform: translateY(-25px);
+          }
+        100% {
+          transform: translateY(0);
+        }
+      }
+   
 .search-form {
     width: 458px;   
     min-height: 173px;
@@ -675,6 +702,7 @@ body {
 .map {
     display: block;
     height: 473px; 
+    background-image: url("../img/map.jpg");
     background-size: cover;
 }
 
@@ -688,7 +716,7 @@ body {
     margin: 0;
     color: #ffffff;           
     background-image: url("../img/filter-background.jpg");
-    background-color: #dae8f2;
+    background-color: #81b3d2;
     background-size: 1200px 562px; 
     background-size: cover;
     background-repeat: no-repeat;
