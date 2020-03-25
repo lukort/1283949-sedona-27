@@ -430,6 +430,7 @@ body {
     min-height: 286px;
     text-align: center;
     background-color: #ffffff;
+    position: relative;
 }
 
 .search h2 { 
@@ -467,7 +468,7 @@ body {
 
 .search-field-show {    
  display: block;
- animation: bounce 2s;
+ animation: bounce 1.5s;
 }
 
 .search-field-close {
@@ -475,26 +476,14 @@ body {
 }
 
 @keyframes bounce {
-        0% {
-          transform: translateY(-86px);
-        }
-      
-        25% {
-          transform: translateY(-75px);
-        }
-      
-        50% {
-          transform: translateY(-50px);
-        }
+    from {transform:translateY(-50%);
+        opacity: 0;
+    } 
+    to {transform:translateY(0);
+        opacity: 1;
+    }
+    }
 
-        75% {
-            transform: translateY(-25px);
-          }
-        100% {
-          transform: translateY(0);
-        }
-      }
-   
 .search-form {
     width: 458px;   
     min-height: 173px;
